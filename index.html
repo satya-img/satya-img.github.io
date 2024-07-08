@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Gallery and Blog</title>
+        <style>
+            /* ... (previous styles remain the same) ... */
+    
+            .scroll-prompt {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 20px;
+                font-size: 14px;
+                animation: fade 2s infinite alternate;
+            }
+    
+            @keyframes fade {
+                from { opacity: 0.5; }
+                to { opacity: 1; }
+            }
+        </style>
+    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery and Blog</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 33.33vh);
+            height: 100vh;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-text {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .blog {
+            background-color: black;
+            color: white;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .blog h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=1" alt="Gallery image 1">
+            <div class="overlay">
+                <div class="overlay-text">Image 1</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=2" alt="Gallery image 2">
+            <div class="overlay">
+                <div class="overlay-text">Image 2</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=3" alt="Gallery image 3">
+            <div class="overlay">
+                <div class="overlay-text">Image 3</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=4" alt="Gallery image 4">
+            <div class="overlay">
+                <div class="overlay-text">Image 4</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=5" alt="Gallery image 5">
+            <div class="overlay">
+                <div class="overlay-text">Image 5</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=6" alt="Gallery image 6">
+            <div class="overlay">
+                <div class="overlay-text">Image 6</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=7" alt="Gallery image 7">
+            <div class="overlay">
+                <div class="overlay-text">Image 7</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=8" alt="Gallery image 8">
+            <div class="overlay">
+                <div class="overlay-text">Image 8</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/400/400?random=9" alt="Gallery image 9">
+            <div class="overlay">
+                <div class="overlay-text">Image 9</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-prompt">Scroll down for more</div>
+
+    <div class="blog">
+        <h2>Blog Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+        <p>Praesent euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, nec tincidunt nunc nunc id nunc.</p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPrompt = document.querySelector('.scroll-prompt');
+            if (window.scrollY > 100) { // Adjust this value as needed
+                scrollPrompt.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
